@@ -46,15 +46,10 @@ def check_lists(list1 = ['Black', 'Pink', 'Yellow', 'Red', 'Green', 'White'], li
 check_lists()
 
 
-def list_of_lists(list = [[1, 2, 3], [4, 5, 6, 7, 8], [9, 10, 11, 12]]):
-    a = list[0]
-    b = list[1]
-    c = list[2]
-    y = []
-    z=[a[:2], b[:3], c[-2:]]
-    if b == y:
-        return z
-    else:
-        del b[0]
-        return z
-list_of_lists()
+def list_of_lists(list):
+    ret = [[], [], []]
+    ret[0] = list[0][:2]
+    ret[1] = list[1][1:][:3]
+    ret[2] = list[2][-2:]
+    return ret
+list_of_lists1([[1,2,3],[4,5,6,7,8],[9,10,11,12]])
