@@ -50,7 +50,11 @@ def list_of_lists(list = [[1, 2, 3], [4, 5, 6, 7, 8], [9, 10, 11, 12]]):
     a = list[0]
     b = list[1]
     c = list[2]
-    del b[0]
+    y = []
     z=[a[:2], b[:3], c[-2:]]
-    return z
+    if b == y:
+        return z
+    else:
+        del b[0]
+        return z
 list_of_lists()
