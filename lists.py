@@ -1,15 +1,19 @@
 def remove_elements(list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']):
-    del list[0]
-    if len(list)<5:
-        if len(list)<4:
-            return list
-        else:
-            del list[(len(list)-2)]
-            return list 
-    else:
-        del list[(len(list)-1)]
-        del list[(len(list)-1)]
+    list2 = []
+    if list == list2:
         return list
+    else:
+        del list[0]
+        if len(list)<5:
+            if len(list)<4:
+                return list
+            else:
+                del list[(len(list)-2)]
+                return list 
+        else:
+            del list[(len(list)-1)]
+            del list[(len(list)-1)]
+            return list
 remove_elements()
 
 
