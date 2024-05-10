@@ -52,4 +52,4 @@ def list_of_lists(list):
     ret[1] = list[1][1:][:3]
     ret[2] = list[2][-2:]
     return ret
-list_of_lists1([[1,2,3],[4,5,6,7,8],[9,10,11,12]])
+list_of_lists([[1,2,3],[4,5,6,7,8],[9,10,11,12]])
