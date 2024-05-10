@@ -1,8 +1,15 @@
 def remove_elements(list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']):
     del list[0]
-    del list[(len(list)-1)]
-    del list[(len(list)-1)]
-    return list
+    if len(list)<5:
+        if len(list)<4:
+            return list
+        else:
+            del list[(len(list)-2)]
+            return list 
+    else:
+        del list[(len(list)-1)]
+        del list[(len(list)-1)]
+        return list
 remove_elements()
 
 
@@ -15,15 +22,20 @@ add_elements()
 def is_empty(list = [1]):
     empty = []
     if list == empty:
-        return "Vacio"
+        return True
     else:
-        return "Tiene elementos"
+        return False
 is_empty()
 
 def check_lists(list1 = ['Black', 'Pink', 'Yellow', 'Red', 'Green', 'White'], list2 = ['Red', 'Green', 'White', 'Black', 'Pink']):
-    if list1[2] == list2[2]:
-        return True
-    elif len(list1)<3 or len(list2)<3:
+    if len(list1)>= 3 and len(list2)>=3:
+        if list1[2] == list2[2]:
+            return True
+        elif len(list1)<3 or len(list2)<3:
+            return False
+        else:
+            return False
+    elif len(list1)>=3 and len(list2)<3:
         return False
     else:
         return False
